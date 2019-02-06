@@ -15,7 +15,7 @@ const filter = {
 // const debug = /--debug/.test(process.argv[2])
 const debug = false;
 
-if (process.mas) app.setName('Google Sign in')
+if (process.mas) app.setName('SSO Sign in')
 
 let mainWindow = null
 

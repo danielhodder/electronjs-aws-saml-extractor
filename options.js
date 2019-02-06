@@ -1,5 +1,5 @@
 const yargs = require('yargs')
-  .command('electronjs-google-aws-saml-extractor', 'Get STS credentials for the AWS CLI')
+  .command('electronjs-aws-saml-extractor', 'Get STS credentials for the AWS CLI')
   .demandOption('url', 'The IDP Initiated SSO URL to to open')
   .demandOption('credential-file', 'The location where the temporary credentials will be stored')
   .demandOption('principal-arn', 'The ARN of the principal. This identifies the IDP')
