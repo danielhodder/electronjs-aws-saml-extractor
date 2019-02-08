@@ -3,7 +3,6 @@ const glob = require('glob')
 const {app, BrowserWindow} = require('electron')
 const { session } = require('electron')
 const { webContents } = require('electron')
-const saml = require('./saml-extrat')
 const { parse } = require('qs')
 const url = require('./options').url
 
@@ -46,7 +45,6 @@ function initialize () {
       session.defaultSession.webRequest.onBeforeRequest(filter, (details, callback) => {
         const contents = details.uploadData[0].bytes.toString();
         const form_data = parse(contents);
-        // console.log(form_data.SAMLResponse)
         callback({cancel: true});
   
         require('./assume-role').aquireShortLivedCredentials(form_data.SAMLResponse).then(resolve, reject)
