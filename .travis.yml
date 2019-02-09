@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+- "iojs"
+matrix:
+  include:
+  - os: linux
+    dist: xenial
+    sudo: required
+script:
+- npm run package:linux
